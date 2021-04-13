@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"xmlns:th="http://www.thymeleaf.org" >
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add Form</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 </head>
 <body>
+<form>
+    Name:<input type="text"name="name"placeholder="Enter Name"><br/>
+    <div class="container">
+        <h2>Form control: inline checkbox</h2>
+        <p>The form below contains three inline checkboxes:</p>
+        <form>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="">Letter
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="">Packet
+            </label>
+
+        </form>
+    </div>
+    <br/>
+    Weight:<input type="number"name="name"placeholder="Enter Weight"><br/>
+    <div class="form-group">
+        <label >Weight Type:</label>
+        <select >
+            <option value="kg">Kg</option>
+            <option value="g">G</option>
+
+        </select>
+    </div>
+    <br/>
+    <div class="form-group">
+        <label >Country:</label>
+        <select >
+            <option value="Sweden">Sweden</option>
+            <option value="Australia">Australia</option>
+
+        </select>
+    </div>
+    <br/>
+    <button type="submit">Register</button>
+</form>
 
 </body>
 </html>
